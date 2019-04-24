@@ -29,7 +29,7 @@ or you can pass an option like:
 
 ```ruby
 class Post < ActiveRecord::Base
-  validate :is_public, boolean: { message: 'Custom your error message' }
+  validate :is_public, boolean: { message: 'Customize your error message' }
 end
 ```
 
