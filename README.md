@@ -54,7 +54,7 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/spice-inc/boolean_validator.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ayumitamai97/boolean_validator.
 
 ## License
 
