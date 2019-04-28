@@ -18,7 +18,8 @@ And then execute:
 
 ## Usage
 
-In your model:
+To validate boolean value with this gem, try:
+
 ```ruby
 class Post
   include ActiveModel::Model
@@ -26,12 +27,17 @@ class Post
 end
 ```
 
-or you can pass an option like:
+```ruby
+class Post < ActiveRecord::Base
+  validates :is_public_before_type_cast, boolean: true
+end
+```
+
+You can pass an option like:
 
 ```ruby
-class Post
-  include ActiveModel::Model
-  validate :is_public, boolean: { message: 'Customize your error message' }
+class Post < ActiveRecord::Base
+  validate :is_public_before_type_cast, boolean: { message: 'Customize your error message' }
 end
 ```
 
