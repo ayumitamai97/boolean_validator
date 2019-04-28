@@ -2,10 +2,10 @@ $:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name        = 'boolean_validator'
-  spec.version     = '0.0.1'
-  spec.authors     = ['Spice, inc.']
-  spec.email       = ['info@spiceinc.co']
-  spec.homepage    = 'https://spiceinc.co'
+  spec.version     = '0.1.0'
+  spec.authors     = ['ayumitamai97']
+  spec.email       = ['ayumitamai97@gmail.com']
+  spec.homepage    = 'https://github.com/ayumitamai97'
   spec.summary     = 'Boolean validator for Rails and ActiveModel.'
   spec.description = 'Boolean validator for Rails and ActiveModel.'
   spec.license     = 'MIT'
