@@ -2,7 +2,7 @@ $:.push File.expand_path('lib', __dir__)
 
 Gem::Specification.new do |spec|
   spec.name        = 'boolean_validator'
-  spec.version     = '0.1.0'
+  spec.version     = '0.1.1'
   spec.authors     = ['ayumitamai97']
   spec.email       = ['ayumitamai97@gmail.com']
   spec.homepage    = 'https://github.com/ayumitamai97/boolean_validator'
