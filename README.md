@@ -18,10 +18,28 @@ And then execute:
 
 ## Usage
 
-In your model:
+You would have implemented a `Post` model like this:
+
 ```ruby
 class Post < ActiveRecord::Base
-  validates :is_public, boolean: true
+  validates :is_public_before_type_cast, inclusion: { in: [true, false] }
+end
+```
+
+or this (though this is wrong because this *validation* actually *validates nothing*):
+
+```ruby
+class Post < ActiveRecord::Base
+  validates :is_public, inclusion: { in: [true, false] }
+end
+```
+
+
+To validate boolean value with this gem, try:
+
+```ruby
+class Post < ActiveRecord::Base
+  validates :is_public_before_type_cast, boolean: true
 end
 ```
 
@@ -29,7 +47,7 @@ or you can pass an option like:
 
 ```ruby
 class Post < ActiveRecord::Base
-  validate :is_public, boolean: { message: 'Customize your error message' }
+  validate :is_public_before_type_cast, boolean: { message: 'Customize your error message' }
 end
 ```
 
