@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.authors     = ['ayumitamai97']
   spec.email       = ['ayumitamai97@gmail.com']
   spec.homepage    = 'https://github.com/ayumitamai97/boolean_validator'
-  spec.summary     = 'Boolean validator for Rails and ActiveModel and ActiveRecord.'
-  spec.description = 'Boolean validator for Rails and ActiveModel and ActiveRecord.'
+  spec.summary     = 'Boolean validator for ActiveModel and ActiveRecord on Rails.'
+  spec.description = 'Boolean validator for ActiveModel and ActiveRecord on Rails.'
   spec.license     = 'MIT'
 
   spec.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
