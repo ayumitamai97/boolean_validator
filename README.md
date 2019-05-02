@@ -20,7 +20,8 @@ And then execute:
 
 In your model:
 ```ruby
-class Post < ActiveRecord::Base
+class Post
+  include ActiveModel::Model
   validates :is_public, boolean: true
 end
 ```
@@ -28,7 +29,8 @@ end
 or you can pass an option like:
 
 ```ruby
-class Post < ActiveRecord::Base
+class Post
+  include ActiveModel::Model
   validate :is_public, boolean: { message: 'Customize your error message' }
 end
 ```
@@ -36,7 +38,9 @@ end
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ayumitamai97/boolean_validator.
+- Note: With `ActiveRecord`, this validation does not work functionally and just work as column type declaration.
+- Implementation for `ActiveRecord` is here: https://github.com/ayumitamai97/boolean_validator/pull/4
+- Bug reports and your opinions are welcome.
 
 ## License
 
