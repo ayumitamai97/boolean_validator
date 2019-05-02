@@ -5,7 +5,7 @@ Gem::Specification.new do |spec|
   spec.version     = '0.1.1'
   spec.authors     = ['ayumitamai97']
   spec.email       = ['ayumitamai97@gmail.com']
-  spec.homepage    = 'https://github.com/ayumitamai97/boolean_validator'
+  spec.homepage    = 'https://github.com/ayumitamai97'
   spec.summary     = 'Boolean validator for Rails and ActiveModel.'
   spec.description = 'Boolean validator for Rails and ActiveModel.'
   spec.license     = 'MIT'

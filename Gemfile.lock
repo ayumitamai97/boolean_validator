@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    boolean_validator (0.1.0)
+    boolean_validator (0.0.1)
       activemodel (>= 5.0.0)
 
 GEM
