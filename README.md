@@ -2,6 +2,10 @@
 
 This gem enables your Rails-based app to validate boolean values much easier.
 
+With boolean_validator, you can
+- Annotate column type much simpler
+- Validate column type
+- Customize validation message
 
 ## Installation
 
@@ -13,25 +17,45 @@ gem 'boolean_validator'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 
 ## Usage
+### With `ActiveRecord`, when you just want to declare column type
+```ruby
+class Post < ActiveRecord::Base
+  # These two lines do the same thing
+  validates :is_public, boolean: true
+  validates :is_public, boolean: { strict: true }
+  
+  # When you would like to customize validation error message
+  validates :is_public, boolean: { strict: true, message: ' IS INVALID!!' }
+end
+```
 
-In your model:
+### With `ActiveRecord`, when you really want to validate before_type_cast value
+```ruby
+class Post < ActiveRecord::Base
+  validates :is_public_before_type_cast, boolean: true
+end
+```
+
+### With `ActiveModel`, when you just want to declare column type
+```ruby
+class Post < ActiveRecord::Base
+  include ActiveModel::Model
+  
+  # `fuzzy: true` option does type cast before validation, so it acts more like annotation rather than validation
+  validates :is_public, boolean: { fuzzy: true } 
+end
+```
+
+
+### With `ActiveModel`, when you really want to validate value
 ```ruby
 class Post
   include ActiveModel::Model
   validates :is_public, boolean: true
-end
-```
-
-or you can pass an option like:
-
-```ruby
-class Post
-  include ActiveModel::Model
-  validate :is_public, boolean: { message: 'Customize your error message' }
 end
 ```
 
