@@ -18,43 +18,29 @@ And then execute:
 
 ## Usage
 
-You would have implemented a `Post` model like this:
-
+In your model:
 ```ruby
-class Post < ActiveRecord::Base
-  validates :is_public_before_type_cast, inclusion: { in: [true, false] }
-end
-```
-
-or this (though this is wrong because this *validation* actually *validates nothing*):
-
-```ruby
-class Post < ActiveRecord::Base
-  validates :is_public, inclusion: { in: [true, false] }
-end
-```
-
-
-To validate boolean value with this gem, try:
-
-```ruby
-class Post < ActiveRecord::Base
-  validates :is_public_before_type_cast, boolean: true
+class Post
+  include ActiveModel::Model
+  validates :is_public, boolean: true
 end
 ```
 
 or you can pass an option like:
 
 ```ruby
-class Post < ActiveRecord::Base
-  validate :is_public_before_type_cast, boolean: { message: 'Customize your error message' }
+class Post
+  include ActiveModel::Model
+  validate :is_public, boolean: { message: 'Customize your error message' }
 end
 ```
 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/ayumitamai97/boolean_validator.
+- Note: With `ActiveRecord`, this validation does not work functionally and just work as column type declaration.
+- Implementation for `ActiveRecord` is here: https://github.com/ayumitamai97/boolean_validator/pull/4
+- Bug reports and your opinions are welcome.
 
 ## License
 
