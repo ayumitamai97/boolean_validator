@@ -13,7 +13,7 @@ gem 'boolean_validator'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 
 ## Usage
